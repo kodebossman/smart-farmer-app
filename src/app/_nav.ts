@@ -2,7 +2,7 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
-    name: 'Dashboard',
+    name: 'SMART FARMER',
     url: '/dashboard',
     icon: 'icon-speedometer',
     badge: {
@@ -10,29 +10,34 @@ export const navItems: INavData[] = [
       text: 'NEW'
     }
   },
+  // {
+  //   title: true,
+  //   name: 'Theme'
+  // },
+  // {
+  //   name: 'Colors',
+  //   url: '/theme/colors',
+  //   icon: 'icon-drop'
+  // },
+  // {
+  //   name: 'Typography',
+  //   url: '/theme/typography',
+  //   icon: 'icon-pencil'
+  // },
+  // {
+  //   title: true,
+  //   name: 'Smart Farmer '
+  // },
   {
-    title: true,
-    name: 'Theme'
-  },
-  {
-    name: 'Colors',
-    url: '/theme/colors',
-    icon: 'icon-drop'
-  },
-  {
-    name: 'Typography',
-    url: '/theme/typography',
-    icon: 'icon-pencil'
-  },
-  {
-    title: true,
-    name: 'Components'
-  },
-  {
-    name: 'Base',
+    name: 'FARMERS',
     url: '/base',
     icon: 'icon-puzzle',
     children: [
+      {
+        name: 'Farmers List',
+        url: '/base/farmers',
+        icon: 'icon-puzzle'
+      },
       {
         name: 'Cards',
         url: '/base/cards',

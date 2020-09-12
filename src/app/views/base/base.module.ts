@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+
 import { CardsComponent } from './cards.component';
 
 // Forms Component
@@ -47,6 +48,7 @@ import { NavbarsComponent } from './navbars/navbars.component';
 
 // Components Routing
 import { BaseRoutingModule } from './base-routing.module';
+import { FarmerslistComponent } from './farmerslist/farmerslist.component';
 
 @NgModule({
   imports: [
@@ -74,7 +76,8 @@ import { BaseRoutingModule } from './base-routing.module';
     PopoversComponent,
     ProgressComponent,
     TooltipsComponent,
-    NavbarsComponent
+    NavbarsComponent,
+    FarmerslistComponent
   ]
 })
 export class BaseModule { }

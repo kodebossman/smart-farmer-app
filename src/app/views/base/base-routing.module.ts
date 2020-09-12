@@ -13,7 +13,7 @@ import { PopoversComponent } from './popovers.component';
 import { ProgressComponent } from './progress.component';
 import { TooltipsComponent } from './tooltips.component';
 import { NavbarsComponent } from './navbars/navbars.component';
-
+import { FarmerslistComponent } from './farmerslist/farmerslist.component';
 const routes: Routes = [
   {
     path: '',
@@ -58,6 +58,14 @@ const routes: Routes = [
         component: TabsComponent,
         data: {
           title: 'Tabs'
+        }
+      },
+    
+      {
+        path: 'farmers',
+        component: FarmerslistComponent,
+        data: {
+          title: 'Farmers List'
         }
       },
       {
