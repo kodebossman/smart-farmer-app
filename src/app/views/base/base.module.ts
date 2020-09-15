@@ -49,6 +49,9 @@ import { NavbarsComponent } from './navbars/navbars.component';
 // Components Routing
 import { BaseRoutingModule } from './base-routing.module';
 import { FarmerslistComponent } from './farmerslist/farmerslist.component';
+import { ContractComponent } from './contract/contract.component';
+import { MerchantComponent } from './merchant/merchant.component';
+
 
 @NgModule({
   imports: [
@@ -77,7 +80,9 @@ import { FarmerslistComponent } from './farmerslist/farmerslist.component';
     ProgressComponent,
     TooltipsComponent,
     NavbarsComponent,
-    FarmerslistComponent
+    FarmerslistComponent,
+    ContractComponent,
+    MerchantComponent
   ]
 })
 export class BaseModule { }

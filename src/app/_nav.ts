@@ -101,6 +101,50 @@ export const navItems: INavData[] = [
       }
     ]
   },
+
+  //Contracts
+{
+  name: 'CONTRACTS',
+  url:  '/base/contract',
+  icon: 'icon-puzzle',
+
+  children:[
+    {
+      name:' View Contract',
+      url: '/base/contract',
+      icon: 'icon-cursor'
+    },
+
+    {
+      name: 'Create Contract',
+      url: '/base/viewcontract',
+      icon: 'icon-cursor'
+    },
+    {
+      name: 'Deleted Contracts',
+      url: '/base/deletedcontracts',
+      icon: 'icon-cursor'
+
+    }
+  ]
+},
+
+{
+  name: 'MERCHANTS',
+  url:'/base/merchant',
+  icon: 'icon-puzzle',
+
+children:[
+  {
+    name: 'View Merchant',
+    url: '/base/merchant',
+    icon: 'icon-cursor'
+  },
+]
+
+
+},
+
   {
     name: 'Buttons',
     url: '/buttons',

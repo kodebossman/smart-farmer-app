@@ -65,7 +65,8 @@ import { FarmersComponent } from './views/farmers/farmers.component';
     P500Component,
     LoginComponent,
     RegisterComponent,
-    FarmersComponent
+    FarmersComponent,
+
   ],
   providers: [{
     provide: LocationStrategy,
