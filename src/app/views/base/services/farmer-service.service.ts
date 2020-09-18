@@ -12,16 +12,16 @@ headers :new HttpHeaders({
   providedIn: 'root'
 })
 export class FarmerServiceService {
- 
-  todo:Todo;
-  todosUrl:string = 'https://jsonplaceholder.typicode.com/todos';
+
+todo:Todo;
+todosUrl:string = 'https://jsonplaceholder.typicode.com/todos';
 todosLimit = '?_limit=10';
 
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient) {
   }
 //get Todos
   getTodos():Observable<Todo[]>{
     return this.http.get<Todo[]>(`${this.todosUrl}${this.todosLimit}`);
   }
-  
+
 }

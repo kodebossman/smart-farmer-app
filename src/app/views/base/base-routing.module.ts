@@ -14,6 +14,8 @@ import { ProgressComponent } from './progress.component';
 import { TooltipsComponent } from './tooltips.component';
 import { NavbarsComponent } from './navbars/navbars.component';
 import { FarmerslistComponent } from './farmerslist/farmerslist.component';
+import { ContractComponent } from './contract/contract.component';
+import { MerchantComponent } from './merchant/merchant.component';
 const routes: Routes = [
   {
     path: '',
@@ -60,13 +62,33 @@ const routes: Routes = [
           title: 'Tabs'
         }
       },
-    
+      //Farmers Component
       {
         path: 'farmers',
         component: FarmerslistComponent,
         data: {
           title: 'Farmers List'
         }
+      },
+      //Contract
+      {
+        path: 'contract',
+        component: ContractComponent,
+        data:{
+          title:'View Contract'
+        }
+      },
+
+
+      //Merchant
+
+      {
+        path:'merchant',
+        component:MerchantComponent,
+        data:{
+          title:'View Merchants'
+        }
+
       },
       {
         path: 'carousels',
