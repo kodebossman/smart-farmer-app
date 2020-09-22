@@ -1,9 +1,29 @@
-<div *ngFor ="let todo of todos">
-
-    <p>
-        <input type="checkbox"/>
-        {{todo.title}}
-        <button class="del">x</button>
-    </p>
+<h1 id="_heading">List of Farmers</h1>
+<div class="container-fluid">
+  <table class="table table-striped table-inverse table-responsive">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Mobile Number</th>
+        <th>First Name</th>
+        <th>Surname</th>
+        <th>ID Number</th>
+        <th>Ward</th>
+        <th>Longitude</th>
+        <th>Latitude</th>
+        <th>Village</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = 'let farmer of farmers.body.data '>
+          <td scope="row" >{{farmer.msisdn}}</td>
+          <td>{{farmer.firstName}}</td>
+          <td>{{farmer.lastName}}</td>
+          <td>{{farmer.idNumber}}</td>
+          <td>{{farmer.ward}}</td>
+          <td>{{farmer.longitude}}</td>
+          <td>{{farmer.latitude}}</td>
+          <td>{{farmer.village}}</td>
+        </tr>
+      </tbody>
+  </table>
 </div>
-<h1>My Todo</h1>
