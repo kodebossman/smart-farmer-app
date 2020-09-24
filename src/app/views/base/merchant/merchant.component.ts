@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MerchantService } from '../services/merchant.service';
-import { Post } from "../model/Post";
+import { Merchant} from "../model/Merchant";
 
 @Component({
   selector: 'app-merchant',
@@ -9,12 +9,12 @@ import { Post } from "../model/Post";
 })
 export class MerchantComponent implements OnInit {
 
-posts;
+merchants:Merchant[];
   constructor(private service: MerchantService) { }
   ngOnInit(): void {
-    this.service.getPosts().
+    this.service.getMerchant().
     subscribe(response=>{
-      console.log(this.posts = response);
+      console.log(this.merchants = response);
 
     });
   }

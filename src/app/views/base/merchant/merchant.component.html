@@ -3,18 +3,23 @@
   <table class="table table-striped table-inverse table-responsive">
     <thead class="thead-inverse">
       <tr>
-        <th>userId</th>
-        <th>Id</th>
-        <th>title</th>
-        <th>Body</th>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>MERCHANT TYPE</th>
+        <th>LONGITUDE</th>
+        <th>LATITUDE</th>
+        <th>GROWTH POINT</th>
       </tr>
       </thead>
       <tbody>
-        <tr *ngFor = 'let post of posts'>
-          <td scope="row" >{{post.userId}}</td>
-          <td>{{post.id}}</td>
-          <td>{{post.title}}</td>
-          <td>{{post.body}}</td>
+        <tr *ngFor = 'let merchant of merchant'>
+          <td scope="row" >{{merchant.id}}</td>
+          <td>{{merchant.name}}</td>
+          <td>{{merchant.msisdn}}</td>
+          <td>{{merchant.merchantType}}</td>
+          <td>{{merchant.longitude}}</td>
+          <td>{{merchant.latitude}}</td>
+          <td>{{merchant.growthPoint}}</td>
         </tr>
       </tbody>
   </table>
