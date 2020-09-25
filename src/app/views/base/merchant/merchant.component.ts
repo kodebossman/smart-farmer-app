@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MerchantService } from '../services/merchant.service';
-import { Merchant} from "../model/Merchant";
+import { Merchant } from "../model/Merchant";
 
 @Component({
   selector: 'app-merchant',
