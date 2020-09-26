@@ -8,12 +8,12 @@ import { Merchant} from "../model/Merchant";
 })
 export class MerchantService {
 
-base ="https://jsonplaceholder.typicode.com/posts"
-
+base ="https://jsonplaceholder.typicode.com/posts";
+baseU='http://localhost:8080/merchant/findAll';
   constructor(private http: HttpClient) { }
 
   getMerchant():Observable<Post[]>{
-    return this.http.get<Post[]>(this.base);
+    return this.http.get<Post[]>(this.baseU);
   }
   createMerchant(user){
     return this.http.post('http://localhost:8080/merchant/register', user);
