@@ -5,9 +5,13 @@
       <tr>
         
         <th>NAME</th>
+        
+        <th>Phone</th>
         <th>MERCHANT TYPE</th>
         <th>LONGITUDE</th>
         <th>LATITUDE</th>
+        
+        <th>Growth Point</th>
         <th>DELETE</th>
       </tr>
       </thead>
@@ -15,10 +19,12 @@
         <tr *ngFor = 'let merchant of merchants.body.data'>
          
           
-          <td>{{merchant.userId}}</td>
-          <td>{{merchant.id}}</td>
-          <td>{{merchant.title}}</td>
-          <td>{{merchant.body}}</td>
+          <td scope="row">{{merchant.name}}</td>
+          <td>{{merchant.msisdn}}</td>
+          <td>{{merchant.merchantType}}</td>
+          <td>{{merchant.longitude}}</td>
+          <td>{{merchant.latitude}}</td>
+          <td>{{merchant.growthPoint}}</td>
           <td>
             <button class="btn btn-pill btn-block btn-danger btn-sm " (click)="deleMerchant(merchant.id)">X</button>
           </td>
@@ -28,4 +34,6 @@
   </table>
  
 </div>
+
+
 
