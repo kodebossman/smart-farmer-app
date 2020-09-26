@@ -140,6 +140,11 @@ children:[
     url: '/base/merchant',
     icon: 'icon-cursor'
   },
+  {
+    name: 'Register Merchant',
+    url: '/base/registration',
+    icon: 'icon-cursor'
+  },
 ]
 
 

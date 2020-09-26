@@ -1,3 +1,4 @@
+import { RegistrationComponent } from './registration/registration.component';
 // Angular
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -51,6 +52,9 @@ import { BaseRoutingModule } from './base-routing.module';
 import { FarmerslistComponent } from './farmerslist/farmerslist.component';
 import { ContractComponent } from './contract/contract.component';
 import { MerchantComponent } from './merchant/merchant.component';
+import { DeleteComponent } from './delete/delete.component';
+import { UpdateComponent } from './update/update.component';
+
 
 
 @NgModule({
@@ -82,7 +86,9 @@ import { MerchantComponent } from './merchant/merchant.component';
     NavbarsComponent,
     FarmerslistComponent,
     ContractComponent,
-    MerchantComponent
+    MerchantComponent,RegistrationComponent, DeleteComponent, UpdateComponent
+    
+    
   ]
 })
 export class BaseModule { }

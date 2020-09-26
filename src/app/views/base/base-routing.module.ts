@@ -1,3 +1,4 @@
+import { RegistrationComponent } from './registration/registration.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -87,6 +88,15 @@ const routes: Routes = [
         component:MerchantComponent,
         data:{
           title:'View Merchants'
+        }
+
+      },
+      //Register Merchant
+      {
+        path:'registration',
+        component:RegistrationComponent,
+        data:{
+          title:'Merchant Registration'
         }
 
       },

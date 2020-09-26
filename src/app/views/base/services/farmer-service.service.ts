@@ -13,7 +13,7 @@ headers :new HttpHeaders({
 })
 export class FarmerServiceService {
 
-todo:Todo;
+
 todosUrl:string = 'https://jsonplaceholder.typicode.com/todos';
 todosLimit = '?_limit=10';
 

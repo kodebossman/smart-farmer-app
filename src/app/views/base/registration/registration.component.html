@@ -1,0 +1,58 @@
+
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div >
+            <div class="card mx-4">
+              <div class="card-body p-4">
+                <form>
+                  <h1>Register Merchant</h1>
+                  <p class="text-muted">Create a merchant</p>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-user"></i></span>
+                    </div>
+                    <input type="text" name="name" [(ngModel)]="merchant.name" class="form-control" placeholder="name" autocomplete="username" required>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" ><i class="icon-phone"></i></span>
+                    </div>
+                    <input type="text" name="msisdn" [(ngModel)]="merchant.msisdn" class="form-control" placeholder="phone number" autocomplete="email" required>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-layers"></i></span>
+                    </div>
+                    <input type="text" name="merchanttype" [(ngModel)]="merchant.merchantType" class="form-control" placeholder="merchant type" autocomplete="new-password" required>
+                  </div>  
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-compass"></i></span>
+                    </div>
+                    <input type="text" name="longitude" [(ngModel)]="merchant.longitude" class="form-control" placeholder="longitude" autocomplete="new-password" required>
+                  </div><div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-compass"></i></span>
+                    </div>
+                    <input type="text" name="latitude" [(ngModel)]="merchant.latitude" class="form-control" placeholder="latitude" autocomplete="new-password" required>
+                  </div>
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="icon-map"></i></span>
+                    </div>
+                    <input type="text" name="growthpoint" [(ngModel)]="merchant.growthPoint" class="form-control" placeholder="growthPoint" autocomplete="new-password" required>
+                  </div>
+                  <button type="button" class="btn btn-block btn-success" (click)="registerNow()">Create Account</button>
+                </form>
+              </div>   
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+
