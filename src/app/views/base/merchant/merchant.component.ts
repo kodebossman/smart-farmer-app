@@ -13,6 +13,7 @@ import { Observable } from "rxjs";
 export class MerchantComponent implements OnInit {
 
 merchants:any;
+name:string;
 
   constructor(private service: MerchantService) { }
   ngOnInit():void {
@@ -21,12 +22,15 @@ merchants:any;
     });
     
   }
-public deleMerchant(id: number){
+
+  public deleMerchant(id: number){
   let res=this.service.deleteMerchant(id);
   res.subscribe((merchants)=>this.merchants=merchants);
-
-
 }
- 
+
+public findMerchant(){
+  let res=this.service.findByName(this.name);
+  res.subscribe((merchants)=>this.merchants=merchants);
+}
   
 }

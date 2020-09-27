@@ -52,7 +52,7 @@ import { BaseRoutingModule } from './base-routing.module';
 import { FarmerslistComponent } from './farmerslist/farmerslist.component';
 import { ContractComponent } from './contract/contract.component';
 import { MerchantComponent } from './merchant/merchant.component';
-import { DeleteComponent } from './delete/delete.component';
+
 import { UpdateComponent } from './update/update.component';
 
 
@@ -86,7 +86,7 @@ import { UpdateComponent } from './update/update.component';
     NavbarsComponent,
     FarmerslistComponent,
     ContractComponent,
-    MerchantComponent,RegistrationComponent, DeleteComponent, UpdateComponent
+    MerchantComponent,RegistrationComponent, UpdateComponent
     
     
   ]

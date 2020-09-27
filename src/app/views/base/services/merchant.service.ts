@@ -20,12 +20,13 @@ export class MerchantService {
 
 merchants:Merchant[]
 merchant:Merchant;
-//merchants:Merchant[];
+
 
 
 
 base ="http://localhost:8080/merchant/delete";
 baseU='http://localhost:8080/merchant/findAll';
+baseN='http://localhost:8080/merchant/find';
   constructor(private http: HttpClient) { }
 
   getMerchant():Observable<Merchant[]>{
@@ -39,4 +40,9 @@ baseU='http://localhost:8080/merchant/findAll';
   deleteMerchant(id){
     return this.http.delete(`${this.base}/${id}`);
   }
+  findByName(name){
+    return this.http.get(`${this.baseN}/${name}`);
+   
+  }
+  updateMerchant(){}
 }
