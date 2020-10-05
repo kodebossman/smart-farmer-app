@@ -1,3 +1,4 @@
+import { UpdateComponent } from './update/update.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -90,6 +91,18 @@ const routes: Routes = [
           title:'View Merchants'
         }
 
+        
+      },
+
+      //Update
+      {
+        path:'update/:id',
+        component:UpdateComponent,
+        data:{
+          title:'Update Merchants'
+        }
+
+        
       },
       //Register Merchant
       {

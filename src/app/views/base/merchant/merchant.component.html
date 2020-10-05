@@ -1,13 +1,5 @@
 <h1 id="_heading">Available Merchant</h1>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text"><i class="icon-user"></i></span>
-  </div>
-  <input type="text" name="name" [(ngModel)]="name" class="form-control" placeholder="name" autocomplete="username" required>
-</div>
-<button class="btn btn-pill btn-block btn-success btn-sm " (click)="findMerchant()">Search</button>
-
 
 <div class="container-fluid">
   <table class="table table-striped table-inverse table-responsive">
@@ -22,7 +14,7 @@
         <th>LATITUDE</th>
         
         <th>Growth Point</th>
-        <th>DELETE</th>
+        <th>OPTIONS</th>
       </tr>
       </thead>
       <tbody>
@@ -37,6 +29,8 @@
           <td>{{merchant.growthPoint}}</td>
           <td>
             <button class="btn btn-pill btn-block btn-danger btn-sm " (click)="deleMerchant(merchant.id)">X</button>
+            <button class="btn btn-pill btn-block btn-info btn-sm " (click)="updateMerchant(merchant.id)">Update</button>
+            
           </td>
             
         </tr>

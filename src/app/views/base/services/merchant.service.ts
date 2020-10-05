@@ -1,3 +1,4 @@
+
 import { tap,map } from 'rxjs/operators';
 
 
@@ -23,10 +24,10 @@ merchant:Merchant;
 
 
 
-
+baseP= "http://localhost:8080/merchant/update";
 base ="http://localhost:8080/merchant/delete";
 baseU='http://localhost:8080/merchant/findAll';
-baseN='http://localhost:8080/merchant/find';
+baseN='http://localhost:8080/merchant/findById';
   constructor(private http: HttpClient) { }
 
   getMerchant():Observable<Merchant[]>{
@@ -40,9 +41,11 @@ baseN='http://localhost:8080/merchant/find';
   deleteMerchant(id){
     return this.http.delete(`${this.base}/${id}`);
   }
-  findByName(name){
-    return this.http.get(`${this.baseN}/${name}`);
+  findByName(id:number){
+    return this.http.get(`${this.baseN}/${id}`);
    
   }
-  updateMerchant(){}
+  updateMerchant(id:number,merchant:Merchant):Observable<Object>{
+    return this.http.put(`${this.baseP}/${id}`,merchant);
+  } 
 }

@@ -1,8 +1,7 @@
-import { Post } from './../model/Post';
+import { Router } from '@angular/router';
+
 import { Component, OnInit } from '@angular/core';
 import { MerchantService } from '../services/merchant.service';
-import { Merchant } from "../model/Merchant";
-import { Observable } from "rxjs";
 
 
 @Component({
@@ -13,9 +12,9 @@ import { Observable } from "rxjs";
 export class MerchantComponent implements OnInit {
 
 merchants:any;
-name:string;
+id:number;
 
-  constructor(private service: MerchantService) { }
+  constructor(private service: MerchantService,private router:Router) { }
   ngOnInit():void {
     this.service.getMerchant().subscribe(merchants => {
       this.merchants = merchants;
@@ -25,12 +24,18 @@ name:string;
 
   public deleMerchant(id: number){
   let res=this.service.deleteMerchant(id);
-  res.subscribe((merchants)=>this.merchants=merchants);
+  res.subscribe(merchants=>{
+    console.log(merchants);
+    this.service.getMerchant();
+  });
 }
 
-public findMerchant(){
-  let res=this.service.findByName(this.name);
+public findMerchant(id){
+  let res=this.service.findByName(id);
   res.subscribe((merchants)=>this.merchants=merchants);
 }
+ public updateMerchant(id: number){
+   return this.router.navigate(["base/update",id]);
+ }
   
 }

@@ -8,7 +8,7 @@ import { MerchantService } from '../services/merchant.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  merchant: Merchant= new Merchant("","","","","","");
+  merchant: Merchant= new Merchant();
   message:any;
   
   constructor(private service: MerchantService) { }
