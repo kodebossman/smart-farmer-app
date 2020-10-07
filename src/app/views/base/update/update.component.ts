@@ -10,19 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateComponent implements OnInit {
 id: number;
-merchant:Merchant= new Merchant();
+merchant:any;
   
 constructor(private service: MerchantService,private router:Router,private routeActive:ActivatedRoute) {
  
    }
 
   ngOnInit(): void {
+    this.merchant=new Merchant();
 this.id=this.routeActive.snapshot.params["id"];
-this.service.findByName(this.id).subscribe((merchants)=>{merchants=this.merchant});
+this.service.findById(this.id)
+.subscribe(data => {
+  console.log(data);
+  this.merchant = data.body;
+}, error => console.log(error));
+
   }
 
   updateMerchant(){
-    this.service.updateMerchant(this.id,this.merchant).subscribe(merchants=>{this.router.navigate(["base/merchant"]);
-  console.log(merchants)})
+    this.service.updateMerchant(this.id,this.merchant)
+    .subscribe(data=>{
+      console.log(data);
+      this.merchant=new Merchant();
+      this.router.navigate(["base/merchant"]);
+  })
   }
 }

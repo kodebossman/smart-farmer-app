@@ -19,10 +19,8 @@ const httpOptions ={
 export class MerchantService {
 
 
-merchants:Merchant[]
+
 merchant:Merchant;
-
-
 
 baseP= "http://localhost:8080/merchant/update";
 base ="http://localhost:8080/merchant/delete";
@@ -30,22 +28,27 @@ baseU='http://localhost:8080/merchant/findAll';
 baseN='http://localhost:8080/merchant/findById';
   constructor(private http: HttpClient) { }
 
-  getMerchant():Observable<Merchant[]>{
-    return this.http.get<Merchant[]>(this.baseU)
-    .pipe(map(response=>response)
-    ,tap(merchants=>console.log("Merchants",this.merchants)));
+
+  getMerchant():Observable<any>{
+    return this.http.get(this.baseU);
+
   }
-  createMerchant(user){
+
+
+  createMerchant(user:Object):Observable<Object>{
     return this.http.post('http://localhost:8080/merchant/register', user);
   }
-  deleteMerchant(id){
+
+  deleteMerchant(id:number):Observable<any>{
     return this.http.delete(`${this.base}/${id}`);
   }
-  findByName(id:number){
+
+  findById(id:number):Observable<any>{
     return this.http.get(`${this.baseN}/${id}`);
    
   }
+
   updateMerchant(id:number,merchant:Merchant):Observable<Object>{
-    return this.http.put(`${this.baseP}/${id}`,merchant);
+    return this.http.put(`${this.baseP}/${id}`,merchant); 
   } 
 }
